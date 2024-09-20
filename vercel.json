@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "/",
-      "use": "@vercel/node"
+      "src": "/audio-server.js",
+      "use": "@now/node"
     }
   ],
   "routes": [
     {
-      "src": "/",
-      "dest": "audio-server.js"
+      "src": "/(.*)",
+      "dest": "/audio-server.js"
     }
   ]
 }
