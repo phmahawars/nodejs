@@ -7,10 +7,9 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "https://audio-call-nine.vercel.app", // your frontend URL
+    origin: "*", // your frontend URL
     methods: ["GET", "POST"],
-    allowedHeaders: ["my-custom-header"],
-    credentials: true,
+    allowedHeaders: ["my-custom-header"]
   },
 });
 
